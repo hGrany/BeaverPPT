@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # 暴露80端口
-EXPOSE 6205
+EXPOSE 6105
 
 # 容器启动时执行的命令，类似npm run start
 CMD npm run 
