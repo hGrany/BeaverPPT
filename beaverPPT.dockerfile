@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 6105
 
 # 容器启动时执行的命令，类似npm run start
-CMD npm run 
+CMD npm run dev
