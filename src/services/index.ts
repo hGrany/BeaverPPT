@@ -1,8 +1,8 @@
 import axios from './config'
 
 // export const SERVER_URL = 'http://localhost:5000'
-export const SERVER_URL = (import.meta.env.MODE === 'development') ? '/api' : 'https://server.pptist.cn'
-export const ASSET_URL = 'https://asset.pptist.cn'
+export const SERVER_URL = (import.meta.env.MODE === 'development') ? '/static' : 'https://www.bevtic.com/ppt'
+export const ASSET_URL = 'https://static.bevtic.com/static'
 
 export default {
   getMockData(filename: string): Promise<any> {
@@ -10,7 +10,7 @@ export default {
   },
 
   getFileData(filename: string): Promise<any> {
-    return axios.get(`${ASSET_URL}/data/${filename}.json`)
+    return axios.get(`${ASSET_URL}/ppt/templates/${filename}.json`)
   },
 
   AIPPT_Outline(
