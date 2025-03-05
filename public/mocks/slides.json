@@ -34,11 +34,11 @@
         "type": "text",
         "id": "idn7Mx",
         "left": 355,
-        "top": 65.25,
+        "top": 58,
         "width": 450,
         "height": 188,
         "lineHeight": 1.2,
-        "content": "<p><strong><span style=\"font-size: 112px;\">海狸 PPT</span></strong></p>",
+        "content": "<p><strong><span style=\"font-size: 96px;\">海狸 PPT</span></strong></p>",
         "rotate": 0,
         "defaultFontName": "",
         "defaultColor": "#333"

@@ -16,8 +16,14 @@ COPY . .
 # 构建应用
 RUN npm run build
 
-# 暴露80端口
-EXPOSE 6105
+# 使用nginx作为生产环境服务器
+FROM nginx:stable-alpine as production-stage
 
-# 容器启动时执行的命令，类似npm run start
-CMD npm run dev
+# 从构建阶段复制构建结果到nginx目录
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+# 暴露80端口
+EXPOSE 80
+
+# 启动nginx
+CMD ["nginx", "-g", "daemon off;"]
