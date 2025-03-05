@@ -11,7 +11,8 @@ export default defineConfig({
   ],
   server: {
     host: '0.0.0.0',
-    port: 6105,    
+    port: 6105,   
+    allowedHosts: true, 
     proxy: {
       '/api': {
         target: 'https://server.pptist.cn',
