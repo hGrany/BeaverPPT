@@ -14,10 +14,10 @@ export default defineConfig({
     port: 6105,   
     allowedHosts: true, 
     proxy: {
-      '/static': {
-        target: 'https://static.bevtic.com',
+      '/api': {
+        target: 'https://server.pptist.cn',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/static/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       }
     }
   },
